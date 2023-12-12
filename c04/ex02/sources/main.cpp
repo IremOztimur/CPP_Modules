@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ioztimur <ioztimur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/08 21:31:34 by iremoztimur       #+#    #+#             */
-/*   Updated: 2023/12/10 16:18:42 by ioztimur         ###   ########.fr       */
+/*   Created: 2023/12/08 21:15:15 by iremoztimur       #+#    #+#             */
+/*   Updated: 2023/12/10 16:31:47 by ioztimur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "../includes/Animal.hpp"
+#include "../includes/Dog.hpp"
+#include "../includes/Cat.hpp"
+#include "../includes/WrongCat.hpp"
+#include "../includes/WrongAnimal.hpp"
+#include "../includes/Brain.hpp"
 
-#include "Animal.hpp"
-#include "Brain.hpp"
-
-class Dog : public Animal
+int main()
 {
-	public:
-		Dog();
-		~Dog();
-		Dog(Dog const &other);
-		Dog &operator=(Dog const &rhs);
+	{
+		//Animal *Animal = new Animal();
+		Animal *animal = new Dog();
 
-		void makeSound() const;
-		void	setIdea(size_t, std::string);
-		std::string getIdea(size_t) const;
-	private:
-		Brain *brain;
-};
+		animal->makeSound();
+
+		delete animal;
+	}
+
+}

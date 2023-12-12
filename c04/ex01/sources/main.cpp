@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
+/*   By: ioztimur <ioztimur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 21:15:15 by iremoztimur       #+#    #+#             */
-/*   Updated: 2023/12/09 23:57:43 by iremoztimur      ###   ########.fr       */
+/*   Updated: 2023/12/10 16:19:36 by ioztimur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,17 +63,18 @@ int main()
 			delete(zoo[i]);
 	}
 
+
 	{
 		// Deep Copy Test
 		std::cout << std::endl;
 		Dog *dog = new Dog();
-		dog->brain->setIdea(0, "I am a dog");
-		std::cout << dog->brain->getIdea(0) << std::endl;
+		dog->setIdea(0, "I am a dog");
+		std::cout << dog->getIdea(0) << std::endl;
 		Dog *copy_dog = new Dog(*dog);
-		dog->brain->setIdea(0, "I am nothing");
-		std::cout << "Dog's idea: " << dog->brain->getIdea(0) << std::endl;
-		std::cout << "Copy's idea: " << copy_dog->brain->getIdea(0) << std::endl;
+		dog->setIdea(0, "I am nothing");
+		std::cout << "Dog's idea: " << dog->getIdea(0) << std::endl;
+		std::cout << "Copy's idea: " << copy_dog->getIdea(0) << std::endl;
 		delete dog;
-
 	}
+
 }
