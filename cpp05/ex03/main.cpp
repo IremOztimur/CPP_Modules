@@ -6,7 +6,7 @@
 /*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 09:18:28 by iremoztimur       #+#    #+#             */
-/*   Updated: 2024/03/04 16:06:53 by iremoztimur      ###   ########.fr       */
+/*   Updated: 2024/03/04 16:24:56 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int main() {
 
         // Test making a PresidentialPardonForm
         Form* pardonForm = intern.makeForm("PresidentialPardonForm", "Ford Prefect");
-        pardonForm->beSigned(Bureaucrat("Zaphod Beeblebrox", 10));
-        pardonForm->execute(Bureaucrat("Zaphod Beeblebrox", 10));
+        pardonForm->beSigned(Bureaucrat("Putin", 10));
+        pardonForm->execute(Bureaucrat("Putin", 10));
 
         // Try making an unknown form
         Form* unknownForm = intern.makeForm("UnknownForm", "UnknownTarget");  // Should throw UnknownNameException
