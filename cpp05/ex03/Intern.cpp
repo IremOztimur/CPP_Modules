@@ -6,7 +6,7 @@
 /*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 15:29:50 by iremoztimur       #+#    #+#             */
-/*   Updated: 2024/03/04 16:06:23 by iremoztimur      ###   ########.fr       */
+/*   Updated: 2024/03/04 16:15:22 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,20 @@ Intern::~Intern()
 
 Form *Intern::makeForm(std::string name, std::string target)
 {
-    std::auto_ptr<Form> forms[] = {
-        std::auto_ptr<Form>(new RobotomyRequestForm(target)),
-        std::auto_ptr<Form>(new PresidentialPardonForm(target)),
-        std::auto_ptr<Form>(new ShrubberyCreationForm(target))
+    Form*    forms[] = {
+        new RobotomyRequestForm(target),
+        new PresidentialPardonForm(target),
+        new ShrubberyCreationForm(target)
     };
 
-    for(int i = 0; i < 3; i++)
-    {
-        if (name == forms[i]->getName())
-        {
-            std::cout << "Intern creates " << name << std::endl;
-            return forms[i].release();
-        }
-    }
+	for(int i=0; i<3; i++)
+	{
+		if (name == forms[i]->getName())
+		{
+			std::cout << "Intern creates " << name << std::endl;
+			return (forms[i]);
+		}
+	}
 
-    throw (Intern::UnknownNameException());
+	throw (Intern::UnknownNameException());
 }
-
