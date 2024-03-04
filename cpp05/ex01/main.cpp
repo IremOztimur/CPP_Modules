@@ -6,13 +6,13 @@
 /*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 09:18:28 by iremoztimur       #+#    #+#             */
-/*   Updated: 2024/03/03 18:05:24 by iremoztimur      ###   ########.fr       */
+/*   Updated: 2024/03/03 22:51:28 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <iostream>
 
 int main() {

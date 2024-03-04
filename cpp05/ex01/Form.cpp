@@ -6,11 +6,11 @@
 /*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 09:05:12 by iremoztimur       #+#    #+#             */
-/*   Updated: 2024/03/03 17:34:44 by iremoztimur      ###   ########.fr       */
+/*   Updated: 2024/03/03 23:07:17 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
 // Constructors
 Form::Form(): name("Default"), gradeToSign(150), gradeToExecute(150), isSigned(0){
@@ -93,7 +93,7 @@ void		Form::beSigned(const Bureaucrat &bureaucrat){
 
 std::ostream &operator<<(std::ostream &o, const Form &rhs)
 {
-	o << "Form " << rhs.getName() << " having a gradeToSign " << rhs.getGradeToSign() << " and a gradeToExecute "
+	o << "Form " << YELLOW << rhs.getName() << DEFAULT << " having a gradeToSign " << rhs.getGradeToSign() << " and a gradeToExecute "
 	<< rhs.getGradeToExecute() << " with isSigned equal to " << rhs.getSigned();
 	return (o);
 }

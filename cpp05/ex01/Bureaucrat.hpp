@@ -6,7 +6,7 @@
 /*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 09:20:51 by iremoztimur       #+#    #+#             */
-/*   Updated: 2024/03/03 09:22:30 by iremoztimur      ###   ########.fr       */
+/*   Updated: 2024/03/03 22:51:28 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 #include <iostream>
 #include <exception>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 // ---- Color Codes ----
 # define DEFAULT "\x1b[0m"

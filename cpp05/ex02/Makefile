@@ -6,7 +6,7 @@
 #    By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/03 09:16:53 by iremoztimur       #+#    #+#              #
-#    Updated: 2024/03/03 23:39:10 by iremoztimur      ###   ########.fr        #
+#    Updated: 2024/03/04 09:53:11 by iremoztimur      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm
+FILES		= main Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp
+HEADER		= Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
 
 
 EXTRA_FILES_PATTERN = *_shrubbery

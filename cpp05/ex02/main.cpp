@@ -6,13 +6,14 @@
 /*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 09:18:28 by iremoztimur       #+#    #+#             */
-/*   Updated: 2024/03/03 23:47:25 by iremoztimur      ###   ########.fr       */
+/*   Updated: 2024/03/04 09:57:33 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 #include <iostream>
 
 
@@ -42,24 +43,46 @@ int main() {
         std::cerr << "Exception: " << e.what() << std::endl;
     }
 
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
 
-	{
-    // Create a bureaucrat
-    Bureaucrat bureaucrat("John Doe", 41);
+    {
+        // Create a bureaucrat
+        Bureaucrat bureaucrat("John Doe", 41);
 
-    // Create a RobotomyRequestForm
-    RobotomyRequestForm robotomyForm("Target");
+        // Create a RobotomyRequestForm
+        RobotomyRequestForm robotomyForm("Target");
+
+        try {
+            // Try to execute the form with the bureaucrat
+            robotomyForm.execute(bureaucrat);
+        } catch (const std::exception& e) {
+            std::cerr << "Exception caught: " << e.what() << std::endl;
+        }
+    }
+
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
 
     try {
-        // Try to execute the form with the bureaucrat
-        robotomyForm.execute(bureaucrat);
-    } catch (const std::exception& e) {
-        std::cerr << "Exception caught: " << e.what() << std::endl;
+        // Create a bureaucrat
+        Bureaucrat bureaucrat("Irem Oztimur", 1);
+
+        // Create a PresidentialPardonForm
+        PresidentialPardonForm pardonForm("Ford Prefect");
+
+        // Try signing the form
+        bureaucrat.signForm(pardonForm);
+
+        // Execute the form
+        bureaucrat.executeForm(pardonForm);
+
+    } catch (std::exception &e) {
+        std::cerr << "Exception: " << e.what() << std::endl;
     }
-}
 
     return 0;
 }
+

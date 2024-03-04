@@ -6,7 +6,7 @@
 /*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 09:05:17 by iremoztimur       #+#    #+#             */
-/*   Updated: 2024/03/03 23:04:40 by iremoztimur      ###   ########.fr       */
+/*   Updated: 2024/03/03 23:55:05 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,4 @@ void			Bureaucrat::executeForm(Form const & form){
 	catch(const std::exception& e){
 		std::cerr << e.what() << '\n';
 	}
-
 }
