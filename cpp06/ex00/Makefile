@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+         #
+#    By: ioztimur <ioztimur@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 16:27:52 by iremoztimur       #+#    #+#              #
-#    Updated: 2024/03/05 16:30:10 by iremoztimur      ###   ########.fr        #
+#    Updated: 2024/03/06 20:57:18 by ioztimur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Casting
+NAME		= Converter
 
 CC			= g++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
