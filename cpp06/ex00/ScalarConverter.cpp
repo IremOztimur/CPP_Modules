@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ioztimur <ioztimur@student.42.fr>          +#+  +:+       +#+        */
+/*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:23:40 by ioztimur          #+#    #+#             */
-/*   Updated: 2024/03/06 21:07:25 by ioztimur         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:03:23 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,9 @@ bool ScalarConverter::isInt(void) const{
 }
 
 bool ScalarConverter::isFloat(void) const{
-	if (input.length() > 1 && (isdigit(input[0]) || input[0] == '-' || input[0] == '+')){
+	if (input.length() > 1 && (isdigit(input[0]) || input[0] == '-' || input[0] == '+') &&
+	(std::count(input.begin(), input.end(), '.') <= 1) && (std::count(input.begin(), input.end(), 'f') <= 1))
+	{
 		for (size_t i = 1; i < input.length(); i++){
 			if ((!isdigit(input[i]) && input[i] != '.') && (!isdigit(input[i]) && input[i] != 'f'))
 				return false;
@@ -177,7 +179,9 @@ bool ScalarConverter::isImpossible(void){
 }
 
 bool ScalarConverter::isDouble(void) const{
-	if (input.length() > 1 && (isdigit(input[0]) || input[0] == '-' || input[0] == '+')){
+	if (input.length() > 1 && (isdigit(input[0]) || input[0] == '-' || input[0] == '+') &&
+	(std::count(input.begin(), input.end(), '.') <= 1))
+	{
 		for (size_t i = 1; i < input.length(); i++){
 			if ((!isdigit(input[i]) && input[i] != '.'))
 				return false;
