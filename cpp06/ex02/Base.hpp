@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   deneme.cpp                                         :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iremoztimur <iremoztimur@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 14:55:19 by iremoztimur       #+#    #+#             */
-/*   Updated: 2024/03/07 14:58:32 by iremoztimur      ###   ########.fr       */
+/*   Created: 2024/03/07 22:40:05 by iremoztimur       #+#    #+#             */
+/*   Updated: 2024/03/08 17:14:10 by iremoztimur      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BASE_HPP
+#define BASE_HPP
+
 #include <iostream>
-#include <string>
+#include <stdlib.h>
 
-int main()
-{
-	std::string deneme = "42.0ff";
+#define RED "\033[1;31m"
+#define MAGENTA "\033[1;35m"
+#define RESET "\033[0m"
 
-	std::cout << std::count(deneme.begin(),deneme.end(), 'f') <<std::endl;
-}
+class Base { public: virtual ~Base() {} };
+class A : public Base {};
+class B : public Base {};
+class C : public Base {};
+
+#endif
