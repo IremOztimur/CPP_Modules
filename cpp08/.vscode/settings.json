@@ -1,8 +1,0 @@
-{
-	"files.associations": {
-		"algorithm": "cpp",
-		"__bit_reference": "cpp",
-		"exception": "cpp",
-		"iostream": "cpp"
-	}
-}
